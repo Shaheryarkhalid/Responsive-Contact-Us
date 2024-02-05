@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    --blue-color:#3a1e85;
+}
+section{
+    height:100vh;
+    width:100%;
+    background-color:rgb(126, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .Form-Section{
+    padding:30px; 
+    position: relative;
+    height:auto;
+    width:70%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.Form-Section .column-1{
+    padding:0 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.column-1 .contact-data{
+    padding:20px 10px;
+    text-align: center;
+}
+.column-1 .contact-data i{
+    color:var(--blue-color);
+    font-size:30px;
+    padding: 3px;
+}
+.column-1 .contact-data h3{
+    padding:3px;
+}
+.column-1 .contact-data p{
+    padding:3px;
+}
+.Form-Section .column-2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+.column-2 h1{
+    color: var(--blue-color);
+}
+.column-2 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px 0;
+}
+.column-2 form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.column-2 form input, .column-2 form textarea{
+    padding:15px;
+    margin:7px 0;
+    background-color: rgba(210, 210, 210, 0.4);
+    outline: none;
+    border:none;
+    border-radius:5px;
+    font-size: 1rem;
+} 
+.column-2 form input:focus, .column-2 form textarea:focus{
+    box-shadow: 0 0 2px var(--blue-color) inset;
+}
+.column-2 form textarea{
+    resize: none;
+}
+.column-2 form #submit{
+    padding:13px 10px;
+    width:100px;
+    background-color: var(--blue-color);
+    color:#fff;
+    cursor: pointer;
+}
+.column-2 form #submit:hover{
+    color:#aaa;
+}
+@media screen and (max-width:900px){
+    section{
+    }
+    section .Form-Section{
+        flex-direction: column;
+    }
+    .Form-Section .column-1{
+        padding:20px 0 0 0;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        order: 2;
+    }
+    .Form-Section .column-2{
+        order: 1;
+    }
+}
+@media screen and (max-width:480px){
+    section .Form-Section{
+        padding:10px;
+    }
+    .Form-Section .column-1{
+        width:100%;
+    }
+    .Form-Section .column-2{
+        width: 100%;
+        padding:200px 0 0 0;
+    }
+}
